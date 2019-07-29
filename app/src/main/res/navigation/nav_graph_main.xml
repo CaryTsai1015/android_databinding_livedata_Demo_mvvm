@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/lrf_navigation"
+            app:startDestination="@+id/mainPage1Fragment">
+
+    <fragment android:id="@+id/mainPage1Fragment"
+              android:name="com.example.mvvmtest.View.MainPage1Fragment"
+              android:label="MainPage1Fragment"
+              tools:layout="@layout/fragment_page_1">
+
+        <action android:id="@+id/action_mainPage1Fragment_to_mainPage2Fragment"
+                app:destination="@id/mainPage2Fragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/mainPage2Fragment"
+              android:name="com.example.mvvmtest.View.MainPage2Fragment"
+              android:label="MainPage2Fragment"
+              tools:layout="@layout/fragment_page_2">
+
+        <action android:id="@+id/action_mainPage2Fragment_to_mainPage3Fragment"
+                app:destination="@id/mainPage3Fragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <action android:id="@+id/action_mainPage2Fragment_to_mainPage1Fragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/mainPage1Fragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/mainPage3Fragment"
+              android:name="com.example.mvvmtest.View.MainPage3Fragment"
+              android:label="MainPage3Fragment"
+              tools:layout="@layout/fragment_page_3"
+    >
+        <action android:id="@+id/action_mainPage3Fragment_to_mainPage2Fragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@id/mainPage2Fragment"
+        />
+    </fragment>
+</navigation>
